@@ -1,0 +1,22 @@
+Introduction:
+
+With new york being the financial capital of usa and a very popular tourist attraction, it would be interesting to see what places in new york are most frequently visited. For that using the new york city data that have been used earlier in this course (https://cocl.us/new_york_dataset) and foursquare api, I am going to  going to try to determine top 10 most commonly visited places in each neighborhoods of new york in order to determine which areas are more popular, diverse and accessible than others. This can help me to also figure out if a person wants to start a new restaurant which neighborhoods would be more appropriate for that.
+
+Data:
+•	Since the neighborhood consists of 5 boroughs and 306 neighborhoods, and I would need latitude and longitude information of all, I am going to rely on the same data that we have used earlier in the course. e.g. https://cocl.us/new_york_dataset. I am simply going to do a wget, as we did in the course earlier, to get the data.
+•	We have then created the dataframe with this data, with columns being: 'Borough', 'Neighborhood', 'Latitude', 'Longitude'
+•	We have also used geopy library to get co-ordinates of new York city
+
+•	Then used foresquare api to get the venues(limited to 100 venues and 500 redius) based on latitude and longitude
+
+•	We then used one hot encoding to analyze the data, grouped rows by neighborhood and by taking the mean of the frequency of occurrence of each category
+
+•	We then chose top 5 venues of each neighborhoods, then we created a new dataframe to display the top most commonly visited places for each neighborhood.
+
+•	We then grouped the venues into 5 clusters using kmeans clustering technique, visualized them using folium map.
+
+•	Then analyzed individual clusters
+
+
+
+
